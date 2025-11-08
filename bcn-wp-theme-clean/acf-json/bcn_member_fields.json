@@ -1,0 +1,488 @@
+[
+    {
+        "key": "group_bcn_member_details",
+        "title": "Member Details",
+        "fields": [
+            {
+                "key": "field_bcn_member_company",
+                "label": "Company Name",
+                "name": "bcn_member_company",
+                "type": "text",
+                "instructions": "The company or organization name",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Enter company name",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_bcn_member_contact_person",
+                "label": "Contact Person",
+                "name": "bcn_member_contact_person",
+                "type": "text",
+                "instructions": "Primary contact person's name",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Enter contact person name",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_bcn_member_email",
+                "label": "Email Address",
+                "name": "bcn_member_email",
+                "type": "email",
+                "instructions": "Primary contact email address",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "contact@company.com",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_bcn_member_phone",
+                "label": "Phone Number",
+                "name": "bcn_member_phone",
+                "type": "text",
+                "instructions": "Primary contact phone number",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "(555) 123-4567",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_bcn_member_website",
+                "label": "Website URL",
+                "name": "bcn_member_website",
+                "type": "url",
+                "instructions": "Company website URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://company.com"
+            },
+            {
+                "key": "field_bcn_member_address",
+                "label": "Business Address",
+                "name": "bcn_member_address",
+                "type": "textarea",
+                "instructions": "Full business address",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Enter full business address",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "bcn_member"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Basic member contact and company information"
+    },
+    {
+        "key": "group_bcn_member_social",
+        "title": "Social Media & Links",
+        "fields": [
+            {
+                "key": "field_bcn_member_instagram",
+                "label": "Instagram",
+                "name": "bcn_member_instagram",
+                "type": "url",
+                "instructions": "Instagram profile URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://instagram.com/username"
+            },
+            {
+                "key": "field_bcn_member_facebook",
+                "label": "Facebook",
+                "name": "bcn_member_facebook",
+                "type": "url",
+                "instructions": "Facebook page URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://facebook.com/pagename"
+            },
+            {
+                "key": "field_bcn_member_twitter",
+                "label": "Twitter",
+                "name": "bcn_member_twitter",
+                "type": "url",
+                "instructions": "Twitter profile URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://twitter.com/username"
+            },
+            {
+                "key": "field_bcn_member_linkedin",
+                "label": "LinkedIn",
+                "name": "bcn_member_linkedin",
+                "type": "url",
+                "instructions": "LinkedIn company page URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://linkedin.com/company/companyname"
+            },
+            {
+                "key": "field_bcn_member_youtube",
+                "label": "YouTube",
+                "name": "bcn_member_youtube",
+                "type": "url",
+                "instructions": "YouTube channel URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://youtube.com/channel/channelid"
+            },
+            {
+                "key": "field_bcn_member_tiktok",
+                "label": "TikTok",
+                "name": "bcn_member_tiktok",
+                "type": "url",
+                "instructions": "TikTok profile URL",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "https://tiktok.com/@username"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "bcn_member"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Social media profiles and external links"
+    },
+    {
+        "key": "group_bcn_member_status",
+        "title": "Member Status & Features",
+        "fields": [
+            {
+                "key": "field_bcn_member_featured",
+                "label": "Featured Member",
+                "name": "bcn_member_featured",
+                "type": "true_false",
+                "instructions": "Check to feature this member prominently",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Featured",
+                "ui_off_text": "Regular"
+            },
+            {
+                "key": "field_bcn_member_can_submit",
+                "label": "Can Submit Content",
+                "name": "bcn_member_can_submit_content",
+                "type": "true_false",
+                "instructions": "Allow this member to submit content",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Enabled",
+                "ui_off_text": "Disabled"
+            },
+            {
+                "key": "field_bcn_member_status",
+                "label": "Member Status",
+                "name": "bcn_member_status",
+                "type": "select",
+                "instructions": "Current membership status",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33.33",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "active": "Active",
+                    "pending": "Pending",
+                    "suspended": "Suspended",
+                    "inactive": "Inactive"
+                },
+                "default_value": "active",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_bcn_member_registration_date",
+                "label": "Registration Date",
+                "name": "bcn_member_registration_date",
+                "type": "date_time_picker",
+                "instructions": "When this member registered",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 1
+            },
+            {
+                "key": "field_bcn_member_last_activity",
+                "label": "Last Activity",
+                "name": "bcn_member_last_activity",
+                "type": "date_time_picker",
+                "instructions": "Last member activity",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 1
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "bcn_member"
+                }
+            ]
+        ],
+        "menu_order": 2,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Member status and feature flags"
+    },
+    {
+        "key": "group_bcn_member_business",
+        "title": "Business Information",
+        "fields": [
+            {
+                "key": "field_bcn_member_business_type",
+                "label": "Business Type",
+                "name": "bcn_member_business_type",
+                "type": "select",
+                "instructions": "Type of business or organization",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "dispensary": "Dispensary",
+                    "cultivator": "Cultivator",
+                    "processor": "Processor",
+                    "retailer": "Retailer",
+                    "supplier": "Supplier",
+                    "service": "Service Provider",
+                    "consultant": "Consultant",
+                    "nonprofit": "Non-Profit",
+                    "other": "Other"
+                },
+                "default_value": "",
+                "allow_null": 1,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": "Select business type"
+            },
+            {
+                "key": "field_bcn_member_license_number",
+                "label": "License Number",
+                "name": "bcn_member_license_number",
+                "type": "text",
+                "instructions": "Cannabis business license number (if applicable)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Enter license number",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_bcn_member_services",
+                "label": "Services Offered",
+                "name": "bcn_member_services",
+                "type": "textarea",
+                "instructions": "List of services or products offered",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Describe services or products offered",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_bcn_member_areas_served",
+                "label": "Areas Served",
+                "name": "bcn_member_areas_served",
+                "type": "text",
+                "instructions": "Geographic areas served",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "e.g., Western New York, Buffalo, Rochester",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "bcn_member"
+                }
+            ]
+        ],
+        "menu_order": 3,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Business-specific information and services"
+    }
+]

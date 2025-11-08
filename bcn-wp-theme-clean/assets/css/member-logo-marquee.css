@@ -1,0 +1,243 @@
+/**
+ * Member Logo Marquee Styles
+ * 
+ * Creates a smooth, professional scrolling marquee of member logos
+ * Similar to the BCN homepage marquee
+ */
+
+/* Marquee Container */
+.bcn-member-logo-marquee {
+    width: 100%;
+    height: var(--marquee-height, 120px);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    margin: 2rem 0;
+}
+
+/* Marquee Track Container */
+.bcn-marquee__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Marquee Track */
+.bcn-marquee__track {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+/* Marquee Item */
+.bcn-marquee__item {
+    flex: 0 0 auto;
+    margin-right: var(--logo-spacing, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--marquee-height, 120px) - 20px);
+    min-width: 120px;
+    max-width: 200px;
+}
+
+/* Logo Link */
+.bcn-marquee__logo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+    min-height: 80px;
+}
+
+.bcn-marquee__logo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Logo Image */
+.bcn-marquee__logo-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(0.2);
+    transition: filter 0.3s ease;
+}
+
+.bcn-marquee__logo-link:hover .bcn-marquee__logo-image {
+    filter: grayscale(0);
+}
+
+/* Logo Placeholder */
+.bcn-marquee__logo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4A90E2 0%, #D31C95 100%);
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bcn-marquee__logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Logo Title */
+.bcn-marquee__logo-title {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #6c757d;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Animation Speeds */
+.bcn-marquee--slow .bcn-marquee__track {
+    animation: bcn-marquee-scroll 60s linear infinite;
+}
+
+.bcn-marquee--medium .bcn-marquee__track {
+    animation: bcn-marquee-scroll 40s linear infinite;
+}
+
+.bcn-marquee--fast .bcn-marquee__track {
+    animation: bcn-marquee-scroll 20s linear infinite;
+}
+
+/* Direction Animations */
+.bcn-marquee--left .bcn-marquee__track {
+    animation-direction: normal;
+}
+
+.bcn-marquee--right .bcn-marquee__track {
+    animation-direction: reverse;
+}
+
+/* Pause on Hover */
+.bcn-marquee--pause-hover:hover .bcn-marquee__track {
+    animation-play-state: paused;
+}
+
+/* Keyframes */
+@keyframes bcn-marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bcn-member-logo-marquee {
+        height: 80px;
+        margin: 1rem 0;
+    }
+    
+    .bcn-marquee__item {
+        min-width: 80px;
+        max-width: 120px;
+        margin-right: 20px;
+    }
+    
+    .bcn-marquee__logo-link {
+        min-height: 60px;
+        padding: 8px;
+    }
+    
+    .bcn-marquee__logo-text {
+        font-size: 1rem;
+    }
+    
+    .bcn-marquee__logo-title {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bcn-member-logo-marquee {
+        height: 60px;
+    }
+    
+    .bcn-marquee__item {
+        min-width: 60px;
+        max-width: 80px;
+        margin-right: 15px;
+    }
+    
+    .bcn-marquee__logo-link {
+        min-height: 40px;
+        padding: 6px;
+    }
+    
+    .bcn-marquee__logo-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .bcn-marquee__track {
+        animation: none;
+    }
+    
+    .bcn-marquee__logo-link {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .bcn-member-logo-marquee {
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+    
+    .bcn-marquee__logo-link {
+        background: #ffffff;
+        border: 1px solid #000000;
+    }
+    
+    .bcn-marquee__logo-placeholder {
+        background: #000000;
+        color: #ffffff;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .bcn-member-logo-marquee {
+        display: none;
+    }
+}

@@ -1,0 +1,296 @@
+/**
+ * Member Registration Form Styles
+ * 
+ * Beautiful styling for the member registration form
+ */
+
+.bcn-member-registration-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bcn-member-registration-form__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #1A1A1A;
+    background: linear-gradient(135deg, #4A90E2 0%, #D31C95 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bcn-member-registration-form__description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+}
+
+.bcn-member-registration-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bcn-member-registration-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.bcn-member-registration-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bcn-member-registration-form__label {
+    font-weight: 600;
+    color: #1A1A1A;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bcn-member-registration-form__input,
+.bcn-member-registration-form__select,
+.bcn-member-registration-form__textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.bcn-member-registration-form__input:focus,
+.bcn-member-registration-form__select:focus,
+.bcn-member-registration-form__textarea:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.bcn-member-registration-form__textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.bcn-member-registration-form__file {
+    padding: 0.5rem;
+    border: 2px dashed #e9ecef;
+    border-radius: 8px;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.bcn-member-registration-form__file:hover {
+    border-color: #4A90E2;
+    background: rgba(74, 144, 226, 0.05);
+}
+
+.bcn-member-registration-form__file:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.bcn-member-registration-form__help {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin: 0.25rem 0 0 0;
+}
+
+.bcn-member-registration-form__checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.bcn-member-registration-form__checkbox-label:hover {
+    background: rgba(74, 144, 226, 0.05);
+}
+
+.bcn-member-registration-form__checkbox {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: #4A90E2;
+}
+
+.bcn-member-registration-form__checkbox-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.4;
+}
+
+.bcn-member-registration-form__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bcn-member-registration-form__submit {
+    background: linear-gradient(135deg, #4A90E2 0%, #D31C95 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 200px;
+}
+
+.bcn-member-registration-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+.bcn-member-registration-form__submit:active {
+    transform: translateY(0);
+}
+
+.bcn-member-registration-form__submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form Validation States */
+.bcn-member-registration-form__input:invalid,
+.bcn-member-registration-form__select:invalid,
+.bcn-member-registration-form__textarea:invalid {
+    border-color: #dc3545;
+}
+
+.bcn-member-registration-form__input:valid,
+.bcn-member-registration-form__select:valid,
+.bcn-member-registration-form__textarea:valid {
+    border-color: #28a745;
+}
+
+/* Success Message */
+.bcn-member-registration-success {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.bcn-member-registration-success__title {
+    color: #155724;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.bcn-member-registration-success__message {
+    color: #155724;
+    margin: 0;
+}
+
+/* Error Message */
+.bcn-member-registration-error {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.bcn-member-registration-error__title {
+    color: #721c24;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.bcn-member-registration-error__message {
+    color: #721c24;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bcn-member-registration-form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .bcn-member-registration-form__title {
+        font-size: 2rem;
+    }
+    
+    .bcn-member-registration-form__row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .bcn-member-registration-form__submit {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bcn-member-registration-form {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+    
+    .bcn-member-registration-form__title {
+        font-size: 1.75rem;
+    }
+    
+    .bcn-member-registration-form__description {
+        font-size: 1rem;
+    }
+}
+
+/* Loading State */
+.bcn-member-registration-form__form.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.bcn-member-registration-form__form.loading .bcn-member-registration-form__submit {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.bcn-member-registration-form__form.loading .bcn-member-registration-form__submit::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

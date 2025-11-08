@@ -1,0 +1,18 @@
+/**
+ * Editor Styles
+ *
+ * @package BCN_WP_Theme
+ */
+
+/* Import main styles */
+@import url('../../style.css');
+
+/* Editor specific styles */
+body#tinymce {
+    margin: 12px !important;
+    max-width: 800px;
+}
+
+.wp-block {
+    max-width: 800px;
+}

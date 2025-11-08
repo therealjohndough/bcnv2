@@ -1,0 +1,810 @@
+/**
+ * Member Dashboard Styles
+ * 
+ * @package BCN_WP_Theme
+ * @since 1.0.0
+ */
+
+/* Dashboard Layout */
+.bcn-member-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.member-level {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.level-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    backdrop-filter: blur(10px);
+}
+
+.points-count {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.level-progress {
+    flex: 1;
+    min-width: 300px;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    background: #f39c12;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e8ed;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card h3 {
+    margin: 0 0 20px 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Achievements */
+.achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: all 0.2s ease;
+}
+
+.achievement-item:hover {
+    background: #e9ecef;
+    transform: translateX(4px);
+}
+
+.achievement-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-info {
+    flex: 1;
+}
+
+.achievement-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.achievement-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.achievement-badge {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Statistics */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Activity Feed */
+.activity-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+}
+
+.activity-icon {
+    width: 32px;
+    height: 32px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    margin: 0 0 4px 0;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.activity-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Events */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.event-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+.event-title {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.event-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Content Tabs */
+.content-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #6c757d;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.content-panel {
+    min-height: 200px;
+}
+
+.content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.content-item {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.content-title {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.content-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.content-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.content-status.published {
+    background: #d4edda;
+    color: #155724;
+}
+
+.content-status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.content-status.draft {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Settings */
+.preference-item {
+    margin-bottom: 15px;
+}
+
+.preference-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.preference-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.preference-item select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Testimonial Form */
+.bcn-testimonial-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.bcn-testimonial-form h3 {
+    margin: 0 0 25px 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.testimonial-type-selection,
+.testimonial-rating,
+.testimonial-content,
+.testimonial-industry-focus,
+.testimonial-submit {
+    margin-bottom: 20px;
+}
+
+.testimonial-type-selection label,
+.testimonial-industry-focus label,
+.testimonial-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.testimonial-type-selection select,
+.testimonial-industry-focus select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.testimonial-rating .star-rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.testimonial-rating input[type="radio"] {
+    display: none;
+}
+
+.testimonial-rating label {
+    font-size: 1.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.testimonial-rating input[type="radio"]:checked ~ label,
+.testimonial-rating label:hover {
+    color: #f39c12;
+}
+
+.testimonial-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.testimonial-submit button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.testimonial-submit button:hover {
+    background: #2980b9;
+}
+
+/* Testimonial Display */
+.bcn-testimonials-display {
+    display: grid;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.testimonial-content {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.testimonial-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.testimonial-rating .star {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.testimonial-rating .star.filled {
+    color: #f39c12;
+}
+
+.testimonial-author {
+    text-align: right;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.testimonial-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Blog Submission Form */
+.bcn-blog-submission-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.bcn-blog-submission-form h3 {
+    margin: 0 0 25px 0;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.blog-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-form-field {
+    margin-bottom: 20px;
+}
+
+.blog-form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.blog-form-field input,
+.blog-form-field select,
+.blog-form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.blog-form-field textarea {
+    resize: vertical;
+}
+
+.word-count,
+.seo-counter {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.image-preview,
+.gallery-preview {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-preview img,
+.gallery-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+}
+
+.blog-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.blog-form-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.blog-form-actions .button-primary {
+    background: #3498db;
+    color: white;
+}
+
+.blog-form-actions .button-primary:hover {
+    background: #2980b9;
+}
+
+.blog-form-actions .button-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.blog-form-actions .button-secondary:hover {
+    background: #5a6268;
+}
+
+.blog-form-actions .button-link-delete {
+    background: none;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.blog-form-actions .button-link-delete:hover {
+    background: #dc3545;
+    color: white;
+}
+
+/* Achievement Badges */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.achievement-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-item--bronze {
+    border-color: #cd7f32;
+}
+
+.achievement-item--silver {
+    border-color: #c0c0c0;
+}
+
+.achievement-item--gold {
+    border-color: #ffd700;
+}
+
+.achievement-item--platinum {
+    border-color: #e5e4e2;
+}
+
+.achievement-item--diamond {
+    border-color: #b9f2ff;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+.achievement-earned {
+    border-color: #27ae60 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #d4edda 100%);
+}
+
+.achievement-locked {
+    opacity: 0.6;
+    filter: grayscale(50%);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.achievement-info h4 {
+    margin: 0 0 8px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.achievement-info p {
+    margin: 0 0 10px 0;
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.achievement-points {
+    font-size: 0.8rem;
+    color: #3498db;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #27ae60;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Pro and Premier Member Styles */
+.member-level.pro-member .level-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.member-level.premier-member .level-badge {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.achievement-item--pro {
+    border-color: #667eea;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f2ff 100%);
+}
+
+.achievement-item--premier {
+    border-color: #f093fb;
+    background: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-form-actions {
+        flex-direction: column;
+    }
+}
+
+/* Loading States */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
