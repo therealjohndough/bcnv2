@@ -12,6 +12,21 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * Safely load theme files while logging missing dependencies.
+ *
+ * @param string $relative_path Path relative to the theme root.
+ */
+function bcn_require_theme_file($relative_path) {
+    $full_path = trailingslashit(get_template_directory()) . ltrim($relative_path, '/');
+
+    if (file_exists($full_path)) {
+        require $full_path;
+    } else {
+        error_log(sprintf('BCN Theme: Missing include %s', $relative_path));
+    }
+}
+
+/**
  * Theme Setup
  */
 function bcn_theme_setup() {
@@ -123,12 +138,14 @@ add_action('widgets_init', 'bcn_widgets_init');
  * Enqueue scripts and styles
  */
 function bcn_scripts() {
+    $theme_version = wp_get_theme()->get('Version');
+
     // Enqueue main stylesheet
-    wp_enqueue_style('bcn-style', get_stylesheet_uri(), array(), '1.0.0');
+    wp_enqueue_style('bcn-style', get_stylesheet_uri(), array(), $theme_version);
 
     // Enqueue custom scripts
-    wp_enqueue_script('bcn-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true);
-    wp_enqueue_script('bcn-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('bcn-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), $theme_version, true);
+    wp_enqueue_script('bcn-main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version, true);
 
     // Add inline script for smooth scroll
     wp_add_inline_script('bcn-main', 'var bcnTheme = ' . json_encode(array(
@@ -158,17 +175,17 @@ add_action('wp_enqueue_scripts', function() {
 /**
  * Custom template tags for this theme
  */
-require get_template_directory() . '/includes/template-tags.php';
+bcn_require_theme_file('includes/template-tags.php');
 
 /**
  * Functions which enhance the theme by hooking into WordPress
  */
-require get_template_directory() . '/includes/template-functions.php';
+bcn_require_theme_file('includes/template-functions.php');
 
 /**
  * Customizer additions
  */
-require get_template_directory() . '/includes/customizer.php';
+bcn_require_theme_file('includes/customizer.php');
 
 // Load pattern registrations
 require_once get_template_directory() . '/includes/patterns.php';
@@ -176,57 +193,57 @@ require_once get_template_directory() . '/includes/patterns.php';
 /**
  * Member directory features
  */
-require get_template_directory() . '/includes/member-directory.php';
+bcn_require_theme_file('includes/member-directory.php');
 
 /**
  * Custom post types and taxonomies
  */
-require get_template_directory() . '/includes/post-types.php';
+bcn_require_theme_file('includes/post-types.php');
 
 /**
  * Community features
  */
-require get_template_directory() . '/includes/community-features.php';
+bcn_require_theme_file('includes/community-features.php');
 
 /**
  * Custom Admin Theme
  */
-require get_template_directory() . '/admin-theme/admin-theme.php';
+bcn_require_theme_file('admin-theme/admin-theme.php');
 
 /**
  * ACF Field Groups
  */
-require get_template_directory() . '/includes/acf-fields/acf-field-groups.php';
+bcn_require_theme_file('includes/acf-fields/acf-field-groups.php');
 
 /**
  * Custom Post Types
  */
-require get_template_directory() . '/includes/custom-post-types/custom-post-types.php';
+bcn_require_theme_file('includes/custom-post-types/custom-post-types.php');
 
 /**
  * Automation Features
  */
-require get_template_directory() . '/includes/automation/automation.php';
+bcn_require_theme_file('includes/automation/automation.php');
 
 /**
  * Enhanced Testimonial System
  */
-require get_template_directory() . '/includes/enhanced-testimonial-system.php';
+bcn_require_theme_file('includes/enhanced-testimonial-system.php');
 
 /**
  * Blog Submission System
  */
-require get_template_directory() . '/includes/blog-submission-system.php';
+bcn_require_theme_file('includes/blog-submission-system.php');
 
 /**
  * Member Dashboard System
  */
-require get_template_directory() . '/includes/member-dashboard-system.php';
+bcn_require_theme_file('includes/member-dashboard-system.php');
 
 /**
  * Submission Workflows
  */
-require get_template_directory() . '/includes/submission-workflows.php';
+bcn_require_theme_file('includes/submission-workflows.php');
 
 /**
  * Add custom body classes
